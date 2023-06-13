@@ -8,7 +8,7 @@ const Post = () => {
   const [totalPages, setTotalPages] = useState(0);
 
   function getRandomImageURL(width, height) {
-    return `https://source.unsplash.com/${width}x${height}?switzerland`;
+    return `https://source.unsplash.com/${width}x${height}?landscape`;
   }
 
   useEffect(() => {
