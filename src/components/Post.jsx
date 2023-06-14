@@ -8,10 +8,6 @@ const Post = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  function getRandomImageURL(width, height) {
-    return `https://source.unsplash.com/${width}x${height}?landscape`;
-  }
-
   useEffect(() => {
     axios
       .get("https://gorest.co.in/public/v2/posts")
@@ -48,29 +44,30 @@ const Post = () => {
     <div className="max-w-6xl mx-auto pb-20 mb-10">
       <Hero />
 
+      {/* Card */}
       <div className="flex flex-wrap gap-7 justify-center">
         {posts.map((post) => (
           <div key={post.id}>
-            <div className="max-w-[30rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="max-w-xs bg-slate-50 border border-gray-200 rounded-lg shadow lg:max-w-[30rem]">
               <Link to={`/post/${post.id}`}>
                 <img
                   className="rounded-t-lg"
-                  src={getRandomImageURL(600, 280)}
+                  src="https://source.unsplash.com/600x280?landscape"
                   alt=""
                 />
               </Link>
               <div className="p-5">
                 <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white line-clamp-1">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-1">
                     {post.title}
                   </h5>
                 </div>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2">
+                <p className="mb-3 font-normal text-gray-700 line-clamp-2">
                   {post.body}
                 </p>
                 <Link
                   to={`/post/${post.id}`}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                 >
                   Detail
                   <svg
@@ -93,6 +90,7 @@ const Post = () => {
         ))}
       </div>
 
+      {/* Pagination */}
       <div className="flex justify-center mt-10">
         <nav aria-label="Page navigation example">
           <ul className="inline-flex -space-x-px">
@@ -100,7 +98,7 @@ const Post = () => {
               <button
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
-                className="px-4 py-3 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="px-4 py-3 ml-0 leading-tight text-gray-500 bg-slate-100 border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700"
               >
                 Prev
               </button>
@@ -108,7 +106,7 @@ const Post = () => {
             <li>
               <button
                 aria-current="page"
-                className=" w-16 px-3 py-[10px] text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                className=" w-16 px-3 py-[10px] text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700"
               >
                 {currentPage}
               </button>
@@ -117,7 +115,7 @@ const Post = () => {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
-                className="px-4 py-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="px-4 py-3 leading-tight text-gray-500 bg-slate-100 border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700"
               >
                 Next
               </button>
