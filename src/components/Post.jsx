@@ -48,7 +48,7 @@ const Post = () => {
     <div className="max-w-6xl mx-auto pb-20 mb-10">
       <Hero />
 
-      <div className="flex flex-wrap gap-5 justify-center">
+      <div className="flex flex-wrap gap-7 justify-center">
         {posts.map((post) => (
           <div key={post.id}>
             <div className="max-w-[30rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
