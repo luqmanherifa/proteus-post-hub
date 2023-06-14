@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const PostDetail = () => {
   const { postId } = useParams();
@@ -26,6 +28,7 @@ const PostDetail = () => {
 
   return (
     <div>
+      <Navbar />
       {/* Post Detail */}
       {post && (
         <div className="flex flex-wrap gap-7 justify-center mb-10">
@@ -40,7 +43,10 @@ const PostDetail = () => {
             <div className="mt-5">
               <div>
                 <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900">
-                  {post.title}
+                  {post.title
+                    .split(" ")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" ")}
                 </h5>
               </div>
               <p className="mb-5 font-normal text-gray-700">{post.body}</p>
@@ -70,10 +76,10 @@ const PostDetail = () => {
 
       {/* Comments */}
       {comments.length > 0 && (
-        <div className="pb-10">
+        <div>
           {comments.map((comment) => (
             <div key={comment.id}>
-              <div className="max-w-xs lg:max-w-3xl mx-auto mb-5 border border-slate-300 rounded-xl p-5">
+              <div className="bg-slate-50 max-w-xs lg:max-w-3xl mx-auto mb-5 border border-slate-300 rounded-xl p-5">
                 <div className="flex items-center mb-3 space-x-4">
                   <img
                     className="w-10 h-10 rounded-full"
@@ -127,6 +133,8 @@ const PostDetail = () => {
           ))}
         </div>
       )}
+
+      <Footer />
     </div>
   );
 };

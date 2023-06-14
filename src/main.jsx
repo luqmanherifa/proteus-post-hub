@@ -5,12 +5,12 @@ import PostDetail from "./components/PostDetail";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Posts from "./components/Posts";
 import Users from "./components/Users";
+import App from "./App";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Posts />,
-    // errorElement: <ErrorPage />,
+    element: <App />,
   },
   {
     path: "/post/:postId",
@@ -24,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>
 );

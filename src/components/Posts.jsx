@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Hero from "./Hero";
+import Navbar from "./Navbar";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -41,11 +42,9 @@ const Posts = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto pb-20 mb-10">
-      <Hero />
-
+    <div className="max-w-6xl mx-auto">
       {/* Card */}
-      <div className="flex flex-wrap gap-7 justify-center">
+      <div className="flex flex-wrap gap-6 justify-center">
         {posts.map((post) => (
           <div key={post.id}>
             <div className="max-w-xs bg-slate-50 border border-gray-200 rounded-lg shadow lg:max-w-[30rem]">
@@ -59,7 +58,12 @@ const Posts = () => {
               <div className="p-5">
                 <div>
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-1">
-                    {post.title}
+                    {post.title
+                      .split(" ")
+                      .map(
+                        (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                      )
+                      .join(" ")}
                   </h5>
                 </div>
                 <p className="mb-3 font-normal text-gray-700 line-clamp-2">
@@ -98,7 +102,7 @@ const Posts = () => {
               <button
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
-                className="px-4 py-3 ml-0 leading-tight text-gray-500 bg-slate-100 border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700"
+                className="bg-slate-50 px-6 py-3 ml-0 leading-tight text-gray-500 border border-gray-300 rounded-l-lg hover:bg-gray-200 hover:text-gray-700"
               >
                 Prev
               </button>
@@ -106,7 +110,7 @@ const Posts = () => {
             <li>
               <button
                 aria-current="page"
-                className=" w-16 px-3 py-[10px] text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700"
+                className="bg-slate-50 w-20 px-3 py-[10px] text-blue-600 border border-gray-300 hover:bg-blue-100 hover:text-blue-700"
               >
                 {currentPage}
               </button>
@@ -115,7 +119,7 @@ const Posts = () => {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
-                className="px-4 py-3 leading-tight text-gray-500 bg-slate-100 border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700"
+                className="bg-slate-50 px-6 py-3 leading-tight text-gray-500 border border-gray-300 rounded-r-lg hover:bg-gray-200 hover:text-gray-700"
               >
                 Next
               </button>
