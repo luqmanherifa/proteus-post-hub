@@ -1,19 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Post from "./components/Post";
 import PostDetail from "./components/PostDetail";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Posts from "./components/Posts";
+import Users from "./components/Users";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Post />,
+    element: <Posts />,
     // errorElement: <ErrorPage />,
   },
   {
     path: "/post/:postId",
     element: <PostDetail />,
+  },
+  {
+    path: "/users",
+    element: <Users />,
   },
 ]);
 

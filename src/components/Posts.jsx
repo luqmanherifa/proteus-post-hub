@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Hero from "./Hero";
 
-const Post = () => {
+const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -127,4 +127,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default Posts;
