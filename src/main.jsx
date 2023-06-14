@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     // errorElement: <ErrorPage />,
   },
   {
-    path: "/blog/:postId",
+    path: "/post/:postId",
     element: <PostDetail />,
   },
 ]);
