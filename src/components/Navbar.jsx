@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <nav className="w-full z-20 top-0 left-0 border-b border-gray-200">
-        <div className="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-slate-50 w-full z-20 top-0 left-0 border-b border-gray-200">
+        <div className="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-3">
           <a href="/" className="flex items-center">
             <img
               src="https://source.unsplash.com/200x200?landscape"
               className="w-8 h-8 mr-3 rounded-full"
-              alt="Flowbite Logo"
+              alt="Postum Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">
+            <span className="self-center text-xl font-bold whitespace-nowrap hover:text-blue-700 mt-1">
               Postum
             </span>
           </a>
@@ -51,12 +51,11 @@ const Navbar = () => {
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-100 md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
                 <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                  aria-current="page"
+                  href="/"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Home
                 </a>

@@ -42,7 +42,7 @@ const Posts = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto mb-20">
       {/* Card */}
       <div className="flex flex-wrap gap-6 justify-center">
         {posts.map((post) => (

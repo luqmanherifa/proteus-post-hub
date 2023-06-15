@@ -9,9 +9,9 @@ const Footer = () => {
             <img
               src="https://source.unsplash.com/200x200?landscape"
               className="w-8 h-8 mr-3 rounded-full"
-              alt="Flowbite Logo"
+              alt="Postum Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-xl font-bold whitespace-nowrap text-white hover:text-blue-700 mt-1">
               Postum
             </span>
           </a>
