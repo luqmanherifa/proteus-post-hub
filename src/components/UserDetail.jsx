@@ -1,22 +1,91 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const UserDetail = () => {
   const { userId } = useParams();
   const [user, setUser] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [status, setStatus] = useState("");
+  const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
 
   useEffect(() => {
-    axios
-      .get(`https://gorest.co.in/public/v2/users/${userId}`)
-      .then((response) => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get(
+          `https://gorest.co.in/public/v2/users/${userId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
         setUser(response.data);
-      })
-
-      .catch((error) => {
+      } catch (error) {
         console.error("Error", error);
-      });
-  }, [userId]);
+      }
+    };
+
+    fetchUser();
+  }, [userId, accessToken]);
+
+  const handleUpdate = async (event) => {
+    event.preventDefault();
+
+    const updatedData = {};
+
+    if (name) {
+      updatedData.name = name;
+    }
+
+    if (email) {
+      updatedData.email = email;
+    }
+
+    if (gender) {
+      updatedData.gender = gender;
+    }
+
+    if (status) {
+      updatedData.status = status;
+    }
+
+    try {
+      const response = await axios.patch(
+        `https://gorest.co.in/public/v2/users/${userId}`,
+        updatedData,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+      setUser(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const navigate = useNavigate();
+
+  const deleteUser = async (userId) => {
+    try {
+      const confirmed = window.confirm("Anda yakin ingin menghapus pengguna?");
+
+      if (confirmed) {
+        await axios.delete(`https://gorest.co.in/public/v2/users/${userId}`, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+        alert("User berhasil dihapus");
+        navigate("/users");
+      }
+    } catch (error) {
+      alert("Terjadi kesalahan saat menghapus pengguna");
+    }
+  };
 
   return (
     <div className="flex justify-center mt-10">
@@ -66,6 +135,55 @@ const UserDetail = () => {
               ></path>
             </svg>
           </Link>
+
+          <h2 className="mt-10">Update User</h2>
+          <form onSubmit={handleUpdate}>
+            <div>
+              <label>
+                Name:
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Email:
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Gender:
+                <input
+                  type="text"
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Status:
+                <input
+                  type="text"
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
+                />
+              </label>
+            </div>
+            <button type="submit" className="mb-10">
+              Update User
+            </button>
+          </form>
+
+          <button onClick={() => deleteUser(userId)}>Delete User</button>
         </div>
       )}
     </div>
