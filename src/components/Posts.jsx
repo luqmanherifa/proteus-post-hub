@@ -53,7 +53,6 @@ const Posts = () => {
                     Date.now() + index
                   }`}
                   alt=""
-                  loading="eager"
                 />
               </Link>
               <div className="p-5">
