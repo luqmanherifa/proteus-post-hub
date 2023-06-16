@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Hero from "./Hero";
-import Navbar from "./Navbar";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -45,14 +43,17 @@ const Posts = () => {
     <div className="max-w-6xl mx-auto mb-20">
       {/* Card */}
       <div className="flex flex-wrap gap-6 justify-center">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <div key={post.id}>
             <div className="max-w-xs bg-slate-50 border border-gray-200 rounded-lg shadow lg:max-w-[30rem]">
               <Link to={`/post/${post.id}`}>
                 <img
                   className="rounded-t-lg"
-                  src="https://source.unsplash.com/600x280?landscape"
+                  src={`https://source.unsplash.com/600x280?landscape&${
+                    Date.now() + index
+                  }`}
                   alt=""
+                  loading="eager"
                 />
               </Link>
               <div className="p-5">

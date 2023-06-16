@@ -90,14 +90,16 @@ const Users = () => {
       <Navbar />
       <div className="max-w-6xl mx-auto mt-10 min-h-screen">
         <div className="flex flex-wrap gap-2">
-          {users.slice(0, 10).map((user) => (
+          {users.slice(0, 10).map((user, index) => (
             <div key={user.id}>
               <Link to={`/user/${user.id}`}>
                 <div className="w-[14rem] bg-white border border-gray-200 px-5 py-5 rounded-xl">
                   <div className="flex gap-3">
                     <img
                       className="w-14 h-14 rounded-full shadow-lg"
-                      src="https://source.unsplash.com/200x200?landscape"
+                      src={`https://source.unsplash.com/200x200?landscape&${
+                        Date.now() + index
+                      }`}
                       alt="Bonnie image"
                     />
                     <div>
