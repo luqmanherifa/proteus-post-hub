@@ -11,7 +11,7 @@ const Footer = () => {
               className="w-8 h-8 mr-3 rounded-full"
               alt="Proteus Logo"
             />
-            <span className="self-center text-xl font-bold whitespace-nowrap text-white hover:text-blue-700 mt-1">
+            <span className="self-center text-xl font-bold whitespace-nowrap text-white hover:text-sky-500 mt-1">
               Proteus
             </span>
           </a>

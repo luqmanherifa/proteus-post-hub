@@ -71,7 +71,7 @@ const Posts = () => {
                 </p>
                 <Link
                   to={`/post/${post.id}`}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300"
                 >
                   Detail
                   <svg
@@ -110,7 +110,7 @@ const Posts = () => {
             <li>
               <button
                 aria-current="page"
-                className="bg-slate-50 w-20 px-3 py-[10px] text-blue-600 border border-gray-300 hover:bg-blue-100 hover:text-blue-700"
+                className="bg-slate-50 w-20 px-3 py-[10px] text-sky-500 border border-gray-300 hover:bg-sky-100 hover:text-sky-500"
               >
                 {currentPage}
               </button>

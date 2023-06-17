@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-slate-50 w-full z-20 top-0 left-0 border-b border-gray-200">
+      <nav className="w-full z-20 top-0 left-0 border-b border-gray-200">
         <div className="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-3">
           <a href="/" className="flex items-center">
             <img
@@ -12,7 +12,7 @@ const Navbar = () => {
               className="w-8 h-8 mr-3 rounded-full"
               alt="Proteus Logo"
             />
-            <span className="self-center text-xl font-bold whitespace-nowrap hover:text-blue-700 mt-1">
+            <span className="self-center text-xl font-bold whitespace-nowrap hover:text-sky-500 mt-1">
               Proteus
             </span>
           </a>
@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link
               to="/users"
               type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+              className="text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
             >
               Login
             </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   Home
                 </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   About
                 </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   Services
                 </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   Contact
                 </a>

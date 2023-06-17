@@ -93,7 +93,7 @@ const Users = () => {
           {users.slice(0, 10).map((user, index) => (
             <div key={user.id}>
               <Link to={`/user/${user.id}`}>
-                <div className="w-[14rem] bg-white border border-gray-200 px-5 py-5 rounded-xl">
+                <div className="w-[14rem] bg-white border border-gray-200 px-5 py-5 rounded-xl hover:bg-sky-100">
                   <div className="flex gap-3">
                     <img
                       className="w-14 h-14 rounded-full shadow-lg"
@@ -138,13 +138,13 @@ const Users = () => {
                 id="floating_name"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-sky-600 peer"
                 placeholder=" "
                 required
               />
               <label
                 htmlFor="floating_name"
-                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-sky-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Name
               </label>
@@ -156,13 +156,13 @@ const Users = () => {
                 id="floating_email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-sky-600 peer"
                 placeholder=" "
                 required
               />
               <label
                 htmlFor="floating_email"
-                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-sky-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Email address
               </label>
@@ -176,7 +176,7 @@ const Users = () => {
                   name="gender-radio-group"
                   checked={gender === "male"}
                   onChange={handleGenderChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-sky-500 bg-gray-100 border-gray-300 focus:ring-sky-500"
                 />
                 <label
                   htmlFor="male-radio"
@@ -193,7 +193,7 @@ const Users = () => {
                   name="gender-radio-group"
                   checked={gender === "female"}
                   onChange={handleGenderChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-sky-500 bg-gray-100 border-gray-300 focus:ring-sky-500"
                 />
                 <label
                   htmlFor="female-radio"
@@ -212,7 +212,7 @@ const Users = () => {
                   name="status-radio-group"
                   checked={status === "active"}
                   onChange={handleStatusChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-sky-500 bg-gray-100 border-gray-300 focus:ring-sky-500"
                 />
                 <label
                   htmlFor="active-radio"
@@ -229,7 +229,7 @@ const Users = () => {
                   name="status-radio-group"
                   checked={status === "inactive"}
                   onChange={handleStatusChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-sky-500 bg-gray-100 border-gray-300 focus:ring-sky-500"
                 />
                 <label
                   htmlFor="inactive-radio"
@@ -241,7 +241,7 @@ const Users = () => {
             </div>
             <button
               type="submit"
-              className="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              className="mt-5 text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             >
               Submit
             </button>

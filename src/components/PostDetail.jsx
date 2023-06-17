@@ -55,7 +55,7 @@ const PostDetail = () => {
                 <p className="mb-5 font-normal text-gray-700">{post.body}</p>
                 <Link
                   to="/"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300"
                 >
                   Back
                   <svg
@@ -103,7 +103,7 @@ const PostDetail = () => {
                     <aside className="flex items-center mt-3 space-x-5">
                       <a
                         href="#"
-                        className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
+                        className="inline-flex items-center text-sm font-medium text-sky-500 hover:underline"
                       >
                         <svg
                           aria-hidden="true"
@@ -118,7 +118,7 @@ const PostDetail = () => {
                       </a>
                       <a
                         href="#"
-                        className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline group"
+                        className="inline-flex items-center text-sm font-medium text-sky-500 hover:underline group"
                       >
                         <svg
                           aria-hidden="true"
