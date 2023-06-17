@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-3">
           <a href="/" className="flex items-center">
             <img
-              src="https://source.unsplash.com/100x100?sea"
+              src="/Proteus.png"
               className="w-8 h-8 mr-3 rounded-full"
               alt="Proteus Logo"
             />
