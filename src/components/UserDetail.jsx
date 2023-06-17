@@ -63,8 +63,10 @@ const UserDetail = () => {
         }
       );
       setUser(response.data);
+      alert("User berhasil di-update.");
     } catch (error) {
       console.error(error);
+      alert("Terjadi kesalahan saat update pengguna.");
     }
   };
   const navigate = useNavigate();
@@ -79,11 +81,11 @@ const UserDetail = () => {
             Authorization: `Bearer ${accessToken}`,
           },
         });
-        alert("User berhasil dihapus");
+        alert("User berhasil dihapus.");
         navigate("/users");
       }
     } catch (error) {
-      alert("Terjadi kesalahan saat menghapus pengguna");
+      alert("Terjadi kesalahan saat menghapus pengguna.");
     }
   };
 

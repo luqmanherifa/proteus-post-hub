@@ -80,13 +80,15 @@ const PostDetail = () => {
         {/* Comments */}
         {comments.length > 0 && (
           <div>
-            {comments.map((comment) => (
+            {comments.map((comment, index) => (
               <div key={comment.id} className="mb-3">
                 <div className="bg-slate-50 max-w-xs lg:max-w-3xl mx-auto border border-slate-300 rounded-xl p-5">
                   <div className="flex items-center mb-3 space-x-4">
                     <img
                       className="w-10 h-10 rounded-full"
-                      src="https://source.unsplash.com/200x200?landscape"
+                      src={`https://source.unsplash.com/200x200?landscape&${
+                        Date.now() + index
+                      }`}
                       alt=""
                     />
                     <div className="space-y-1 font-medium">

@@ -7,12 +7,12 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <a href="#" className="flex items-center mb-4 sm:mb-0">
             <img
-              src="https://source.unsplash.com/200x200?landscape"
+              src="https://source.unsplash.com/100x100?sea"
               className="w-8 h-8 mr-3 rounded-full"
-              alt="Postum Logo"
+              alt="Proteus Logo"
             />
             <span className="self-center text-xl font-bold whitespace-nowrap text-white hover:text-blue-700 mt-1">
-              Postum
+              Proteus
             </span>
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
