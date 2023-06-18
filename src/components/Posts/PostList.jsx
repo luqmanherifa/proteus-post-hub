@@ -48,7 +48,7 @@ const PostList = () => {
     <div className="flex flex-wrap gap-6 justify-center">
       {posts.map((post, index) => (
         <div key={post.id}>
-          <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow lg:max-w-[30rem]">
+          <div className="max-w-xs bg-white border border-gray-200 rounded-lg lg:max-w-[30rem]">
             <Link to={`/post/${post.id}`}>
               <img
                 className="rounded-t-lg"

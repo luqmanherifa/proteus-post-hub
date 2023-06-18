@@ -97,7 +97,7 @@ const UpdateUser = ({
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   aria-describedby="helper-text-explanation"
-                  className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5"
+                  className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-72 p-2.5"
                   placeholder="Name"
                 />
               </div>
@@ -115,7 +115,7 @@ const UpdateUser = ({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   aria-describedby="helper-text-explanation"
-                  className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5"
+                  className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-72 p-2.5"
                   placeholder="email@proteus.com"
                 />
               </div>

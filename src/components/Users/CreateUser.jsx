@@ -7,8 +7,8 @@ const CreateUser = ({ setUsers }) => {
   const [gender, setGender] = useState("");
   const [status, setStatus] = useState("");
   const [newUser, setNewUser] = useState(null);
-  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
-  const [isSubmitError, setIsSubmitError] = useState(false);
+  const [isCreateSuccess, setIsCreateSuccess] = useState(false);
+  const [isCreateError, setIsCreateError] = useState(false);
   const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
 
   useEffect(() => {
@@ -46,8 +46,8 @@ const CreateUser = ({ setUsers }) => {
       );
       setNewUser(response.data);
 
-      setIsSubmitSuccess(true);
-      setIsSubmitError(false);
+      setIsCreateSuccess(true);
+      setIsCreateError(false);
 
       setName("");
       setEmail("");
@@ -58,8 +58,8 @@ const CreateUser = ({ setUsers }) => {
     } catch (error) {
       console.error(error);
 
-      setIsSubmitSuccess(false);
-      setIsSubmitError(true);
+      setIsCreateSuccess(false);
+      setIsCreateError(true);
       alert("Create user failed.");
     }
   };
@@ -83,7 +83,7 @@ const CreateUser = ({ setUsers }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               aria-describedby="helper-text-explanation"
-              className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5"
+              className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-72 p-2.5"
               placeholder="Name"
               required
             />
@@ -102,7 +102,7 @@ const CreateUser = ({ setUsers }) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               aria-describedby="helper-text-explanation"
-              className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5"
+              className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-72 p-2.5"
               placeholder="email@proteus.com"
               required
             />
@@ -193,18 +193,18 @@ const CreateUser = ({ setUsers }) => {
             type="submit"
             className="mt-5 text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
-            Submit
+            Create
           </button>
         </form>
 
-        {isSubmitSuccess && (
+        {isCreateSuccess && (
           <p className="my-5 text-base font-medium text-green-600/100">
-            Submit successful!
+            Create successful!
           </p>
         )}
-        {isSubmitError && (
+        {isCreateError && (
           <p className="my-5 text-base font-medium text-red-600/100">
-            Submit error. Please try again.
+            Create error. Please try again.
           </p>
         )}
       </div>

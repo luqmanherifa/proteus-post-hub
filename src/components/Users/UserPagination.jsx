@@ -2,7 +2,7 @@ import React from "react";
 
 const UserPagination = ({ currentPage, totalPages, handleUserPagination }) => {
   return (
-    <div className="mx-auto mt-5">
+    <div className="flex justify-center mt-5">
       <nav aria-label="Page navigation example">
         <ul className="inline-flex -space-x-px">
           <li>

@@ -24,7 +24,7 @@ const Login = () => {
                 type="email"
                 id="email"
                 className="bg-white border border-slate-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
-                placeholder="click@submit.btn"
+                placeholder="click@login.btn"
               />
             </div>
             <div className="mb-6">
@@ -62,7 +62,7 @@ const Login = () => {
               type="submit"
               className="text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             >
-              Submit
+              Login
             </Link>
           </form>
         </div>

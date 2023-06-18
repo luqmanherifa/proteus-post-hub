@@ -35,7 +35,12 @@ const UserList = ({ users, setUsers }) => {
 
     try {
       const response = await axios.get(
-        `https://gorest.co.in/public/v2/users?page=${page}`
+        `https://gorest.co.in/public/v2/users?page=${page}`,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
       );
       setUsers(response.data);
     } catch (error) {
@@ -44,43 +49,73 @@ const UserList = ({ users, setUsers }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-2">
-      {users.slice(0, 10).map((user, index) => (
-        <div key={user.id}>
-          <Link to={`/user/${user.id}`}>
-            <div className="w-[14rem] bg-white border border-gray-200 px-5 py-5 rounded-xl hover:bg-sky-100">
-              <div className="flex gap-3">
-                <img
-                  className="w-14 h-14 rounded-full shadow-lg"
-                  src={`https://source.unsplash.com/200x200?landscape&${
-                    Date.now() + index
-                  }`}
-                  alt="Bonnie image"
-                />
-                <div>
-                  <h5 className="text-sm font-semibold text-slate-600 line-clamp-1 w-[7rem]">
+    <div>
+      <div className="mx-auto">
+        <div className="relative overflow-x-auto border border-slate-200 sm:rounded-lg">
+          <table className="w-full text-sm text-left text-slate-500 table-fixed">
+            <thead className="text-xs text-white uppercase bg-sky-900">
+              <tr>
+                <th scope="col" className="px-6 py-4 w-24">
+                  Profile
+                </th>
+                <th scope="col" className="px-6 py-4">
+                  Name
+                </th>
+                <th scope="col" className="px-6 py-4 w-[26rem]">
+                  Email
+                </th>
+                <th scope="col" className="px-6 py-4 w-32">
+                  Gender
+                </th>
+                <th scope="col" className="px-6 py-4 w-32">
+                  Status
+                </th>
+                <th scope="col" className="px-6 py-4 w-32">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.slice(0, 10).map((user, index) => (
+                <tr key={user.id} className="bg-white border-b">
+                  <td className="px-6 py-4">
+                    <img
+                      className="w-5 h-5 rounded-full"
+                      src={`https://source.unsplash.com/100x100?landscape&${
+                        Date.now() + index
+                      }`}
+                      alt="Bonnie image"
+                    />
+                  </td>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                  >
                     {user.name}
-                  </h5>
-                  <div className="mb-1 text-xs text-slate-600 line-clamp-1 w-[7rem]">
-                    {user.email}
-                  </div>
-                  <div className="flex gap-1">
-                    <div className="mb-1 text-xs text-slate-600">
-                      {user.gender.charAt(0).toUpperCase() +
-                        user.gender.slice(1)}
-                    </div>
-                    <span className="text-xs text-slate-600">&</span>
-                    <div className="text-xs text-slate-600">
-                      {user.status.charAt(0).toUpperCase() +
-                        user.status.slice(1)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
+                  </th>
+                  <td className="px-6 py-4">
+                    <p className="line-clamp-1">{user.email}</p>
+                  </td>
+                  <td className="px-6 py-4">
+                    {user.gender.charAt(0).toUpperCase() + user.gender.slice(1)}
+                  </td>
+                  <td className="px-6 py-4">
+                    {user.status.charAt(0).toUpperCase() + user.status.slice(1)}
+                  </td>
+                  <td className="px-6 py-4">
+                    <Link
+                      to={`/user/${user.id}`}
+                      className="font-medium text-sky-600 hover:underline"
+                    >
+                      Detail
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      ))}
+      </div>
       <UserPagination
         currentPage={currentPage}
         totalPages={totalPages}

@@ -65,7 +65,7 @@ const UserDetail = () => {
                 <div className="flex">
                   <div className="flex gap-5">
                     <img
-                      className="w-28 h-28 rounded-full shadow-lg"
+                      className="w-28 h-28 rounded-full"
                       src="https://source.unsplash.com/200x200?landscape"
                       alt="Bonnie image"
                     />
