@@ -6,7 +6,7 @@ const Hero = () => {
     <section>
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-sky-500 md:text-4xl lg:text-5xl">
-          Post Hub
+          The Post Hub
         </h1>
         <p className="mb-5 max-w-5xl mx-auto font-normal text-slate-400 lg:text-base sm:px-16 lg:px-48">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere

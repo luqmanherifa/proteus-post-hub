@@ -67,7 +67,7 @@ const CreateUser = ({ setUsers }) => {
   return (
     <div>
       <p className="mb-3 text-xl font-bold text-slate-600">Create User</p>
-      <div className="mb-10">
+      <div className="mb-5">
         <form onSubmit={handleCreateUser}>
           <div className="mb-5">
             <label

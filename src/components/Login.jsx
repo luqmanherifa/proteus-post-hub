@@ -8,7 +8,7 @@ const Login = () => {
     <div>
       <Navbar />
       <div className="flex justify-center my-10">
-        <div className="w-96 p-10 border border-slate-200 rounded-xl">
+        <div className="w-96 p-10 bg-white border border-slate-200 rounded-xl">
           <p className="mb-5 flex justify-center text-2xl font-bold text-slate-600">
             Login
           </p>
