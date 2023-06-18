@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import PostDetail from "./components/PostDetail";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Posts from "./components/Posts";
-import Users from "./components/Users";
 import App from "./App";
-import UserDetail from "./components/UserDetail";
+import UserDetail from "./components/Users/UserDetail";
 import Login from "./components/Login";
+import Users from "./components/Users";
+import Post from "./components/Posts/Post";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/post/:postId",
-    element: <PostDetail />,
+    element: <Post />,
   },
   {
     path: "/users",

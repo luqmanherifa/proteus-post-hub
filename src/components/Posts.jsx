@@ -34,7 +34,7 @@ const Posts = () => {
       <div className="flex flex-wrap gap-6 justify-center">
         {posts.map((post, index) => (
           <div key={post.id}>
-            <div className="max-w-xs bg-slate-50 border border-gray-200 rounded-lg shadow lg:max-w-[30rem]">
+            <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow lg:max-w-[30rem]">
               <Link to={`/post/${post.id}`}>
                 <img
                   className="rounded-t-lg"
@@ -90,7 +90,7 @@ const Posts = () => {
               <button
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
-                className="bg-slate-50 px-6 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
+                className="bg-white px-6 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Prev
               </button>
@@ -98,7 +98,7 @@ const Posts = () => {
             <li>
               <button
                 aria-current="page"
-                className="bg-slate-50 w-20 px-3 py-[10px] text-sky-500 border border-gray-300 hover:bg-sky-100 hover:text-sky-500"
+                className="bg-white w-20 px-3 py-[10px] text-sky-500 border border-gray-300 hover:bg-sky-100 hover:text-sky-500"
               >
                 {currentPage}
               </button>
@@ -107,7 +107,7 @@ const Posts = () => {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
-                className="bg-slate-50 px-6 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
+                className="bg-white px-6 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Next
               </button>

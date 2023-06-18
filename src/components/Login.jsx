@@ -8,34 +8,37 @@ const Login = () => {
     <div>
       <Navbar />
       <div className="flex justify-center my-10">
-        <div className="w-96 p-14 border border-slate-200 rounded-xl">
+        <div className="w-96 p-10 border border-slate-200 rounded-xl">
+          <p className="mb-5 flex justify-center text-2xl font-bold text-slate-600">
+            Login
+          </p>
           <form>
             <div className="mb-6">
               <label
-                for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium text-slate-600"
               >
-                Your email
+                Email
               </label>
               <input
                 type="email"
                 id="email"
-                className="bg-slate-50 border border-slate-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+                className="bg-white border border-slate-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
                 placeholder="click@submit.btn"
               />
             </div>
             <div className="mb-6">
               <label
-                for="password"
+                htmlFor="password"
                 className="block mb-2 text-sm font-medium text-slate-600"
               >
-                Your password
+                Password
               </label>
               <input
                 type="password"
                 id="password"
                 placeholder="••••••••"
-                className="bg-slate-50 border border-slate-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
+                className="bg-white border border-slate-300 text-slate-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5"
               />
             </div>
             <div className="flex items-start mb-6">
@@ -44,11 +47,11 @@ const Login = () => {
                   id="remember"
                   type="checkbox"
                   value=""
-                  className="w-4 h-4 border border-slate-300 rounded bg-slate-50 focus:ring-3 focus:ring-sky-300"
+                  className="w-4 h-4 border border-slate-300 rounded bg-white focus:ring-3 focus:ring-sky-300"
                 />
               </div>
               <label
-                for="remember"
+                htmlFor="remember"
                 className="ml-2 text-sm font-medium text-slate-600"
               >
                 Remember me

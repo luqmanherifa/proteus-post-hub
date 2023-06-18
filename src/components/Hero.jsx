@@ -36,7 +36,7 @@ const Hero = () => {
           </a>
           <a
             href="#"
-            className="bg-slate-50 inline-flex justify-center items-center py-2 px-4 text-sm font-medium text-center text-slate-600 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-gray-100"
+            className="bg-white inline-flex justify-center items-center py-2 px-4 text-sm font-medium text-center text-slate-600 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-gray-100"
           >
             Learn more
           </a>
