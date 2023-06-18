@@ -104,17 +104,17 @@ const UserDetail = () => {
                   alt="Bonnie image"
                 />
                 <div>
-                  <h5 className="mb-1 text-xl font-bold text-gray-900">
+                  <h5 className="mb-1 text-xl font-bold text-slate-600">
                     {user.name}
                   </h5>
-                  <div className="mb-1 text-base text-gray-900">
+                  <div className="mb-1 text-base text-slate-600">
                     Email: {user.email}
                   </div>
-                  <div className="mb-1 text-base text-gray-900">
+                  <div className="mb-1 text-base text-slate-600">
                     Gender:{" "}
                     {user.gender.charAt(0).toUpperCase() + user.gender.slice(1)}
                   </div>
-                  <div className="text-base text-gray-900">
+                  <div className="text-base text-slate-600">
                     Status:{" "}
                     {user.status.charAt(0).toUpperCase() + user.status.slice(1)}
                   </div>

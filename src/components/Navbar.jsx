@@ -12,13 +12,13 @@ const Navbar = () => {
               className="w-8 h-8 mr-3 rounded-full"
               alt="Proteus Logo"
             />
-            <span className="self-center text-xl font-bold whitespace-nowrap hover:text-sky-500 mt-1">
+            <span className="self-center text-xl font-bold whitespace-nowrap hover:text-sky-500 mt-1 text-slate-600">
               Proteus
             </span>
           </a>
           <div className="flex md:order-2">
             <Link
-              to="/users"
+              to="/login"
               type="button"
               className="text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
             >
@@ -27,7 +27,7 @@ const Navbar = () => {
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              className="inline-flex items-center p-2 text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -55,7 +55,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-slate-600 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   Home
                 </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-slate-600 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   About
                 </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-slate-600 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   Services
                 </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-slate-600 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0"
                 >
                   Contact
                 </a>

@@ -41,7 +41,6 @@ const Posts = () => {
 
   return (
     <div className="max-w-6xl mx-auto mb-20">
-      {/* Card */}
       <div className="flex flex-wrap gap-6 justify-center">
         {posts.map((post, index) => (
           <div key={post.id}>
@@ -57,7 +56,7 @@ const Posts = () => {
               </Link>
               <div className="p-5">
                 <div>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-1">
+                  <h5 className="mb-1 text-xl font-bold tracking-tight text-slate-600 line-clamp-1">
                     {post.title
                       .split(" ")
                       .map(
@@ -66,7 +65,7 @@ const Posts = () => {
                       .join(" ")}
                   </h5>
                 </div>
-                <p className="mb-3 font-normal text-gray-700 line-clamp-2">
+                <p className="mb-3 font-normal text-slate-600 line-clamp-2">
                   {post.body}
                 </p>
                 <Link
@@ -94,7 +93,6 @@ const Posts = () => {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="flex justify-center mt-10">
         <nav aria-label="Page navigation example">
           <ul className="inline-flex -space-x-px">
@@ -102,7 +100,7 @@ const Posts = () => {
               <button
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
-                className="bg-slate-50 px-6 py-3 ml-0 leading-tight text-gray-500 border border-gray-300 rounded-l-lg hover:bg-gray-200 hover:text-gray-700"
+                className="bg-slate-50 px-6 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Prev
               </button>
@@ -119,7 +117,7 @@ const Posts = () => {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
-                className="bg-slate-50 px-6 py-3 leading-tight text-gray-500 border border-gray-300 rounded-r-lg hover:bg-gray-200 hover:text-gray-700"
+                className="bg-slate-50 px-6 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Next
               </button>

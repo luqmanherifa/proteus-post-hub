@@ -43,7 +43,7 @@ const PostDetail = () => {
               </div>
               <div className="mt-5">
                 <div>
-                  <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900">
+                  <h5 className="mb-4 text-2xl font-bold tracking-tight text-slate-600">
                     {post.title
                       .split(" ")
                       .map(
@@ -52,7 +52,7 @@ const PostDetail = () => {
                       .join(" ")}
                   </h5>
                 </div>
-                <p className="mb-5 font-normal text-gray-700">{post.body}</p>
+                <p className="mb-5 font-normal text-slate-600">{post.body}</p>
                 <Link
                   to="/"
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300"
@@ -91,15 +91,15 @@ const PostDetail = () => {
                       }`}
                       alt=""
                     />
-                    <div className="space-y-1 font-medium">
+                    <div className="space-y-1 font-medium text-slate-600">
                       <p>{comment.name}</p>
-                      <div className="flex items-center text-sm text-gray-500">
+                      <div className="flex items-center text-sm text-slate-500">
                         {comment.email}
                       </div>
                     </div>
                   </div>
                   <div className="col-span-2 mt-6 md:mt-0">
-                    <p className="mb-2 text-gray-500">{comment.body}</p>
+                    <p className="mb-2 text-slate-500">{comment.body}</p>
                     <aside className="flex items-center mt-3 space-x-5">
                       <a
                         href="#"

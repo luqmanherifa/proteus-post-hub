@@ -8,11 +8,11 @@ const Hero = () => {
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-sky-500 md:text-4xl lg:text-5xl">
           Post Hub
         </h1>
-        <p className="mb-5 max-w-5xl mx-auto font-normal text-gray-400 lg:text-base sm:px-16 lg:px-48">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
-          ligula in ipsum porta, ac fringilla mauris luctus. Vestibulum ante
-          ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          curae.
+        <p className="mb-5 max-w-5xl mx-auto font-normal text-slate-400 lg:text-base sm:px-16 lg:px-48">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
+          assumenda reiciendis reprehenderit earum sapiente excepturi, repellat,
+          possimus ad tempore aspernatur repudiandae exercitationem, recusandae
+          adipisci. Error et distinctio iusto!
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a
@@ -36,7 +36,7 @@ const Hero = () => {
           </a>
           <a
             href="#"
-            className="bg-slate-50 inline-flex justify-center items-center py-2 px-4 text-sm font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
+            className="bg-slate-50 inline-flex justify-center items-center py-2 px-4 text-sm font-medium text-center text-slate-600 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-gray-100"
           >
             Learn more
           </a>
