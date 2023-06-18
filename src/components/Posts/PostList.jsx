@@ -70,7 +70,7 @@ const PostList = () => {
                       .join(" ")}
                   </h5>
                 </div>
-                <p className="mb-0 font-normal text-slate-600 line-clamp-2">
+                <p className="mb-3 font-normal text-slate-600 line-clamp-2">
                   {post.body}
                 </p>
                 <Link
