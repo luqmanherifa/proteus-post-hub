@@ -11,20 +11,23 @@ const PostDetail = () => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`https://gorest.co.in/public/v2/posts/${postId}`)
-      .then((response) => {
-        setPost(response.data);
-        return axios.get(
+    const fetchData = async () => {
+      try {
+        const postResponse = await axios.get(
+          `https://gorest.co.in/public/v2/posts/${postId}`
+        );
+        setPost(postResponse.data);
+
+        const commentsResponse = await axios.get(
           `https://gorest.co.in/public/v2/comments?post_id=${postId}`
         );
-      })
-      .then((response) => {
-        setComments(response.data);
-      })
-      .catch((error) => {
+        setComments(commentsResponse.data);
+      } catch (error) {
         console.error("Error", error);
-      });
+      }
+    };
+
+    fetchData();
   }, [postId]);
 
   return (

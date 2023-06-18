@@ -31,13 +31,17 @@ const PostList = () => {
     fetchPosts();
   }, []);
 
-  const handlePagination = (page) => {
+  const handlePagination = async (page) => {
     setCurrentPage(page);
 
-    axios
-      .get(`https://gorest.co.in/public/v2/posts?page=${page}`)
-      .then((response) => setPosts(response.data))
-      .catch((error) => console.error("Error", error));
+    try {
+      const response = await axios.get(
+        `https://gorest.co.in/public/v2/posts?page=${page}`
+      );
+      setPosts(response.data);
+    } catch (error) {
+      console.error("Error", error);
+    }
   };
 
   return (

@@ -30,13 +30,17 @@ const UserList = ({ users, setUsers }) => {
     fetchUsers();
   }, []);
 
-  const handlePagination = (page) => {
+  const handlePagination = async (page) => {
     setCurrentPage(page);
 
-    axios
-      .get(`https://gorest.co.in/public/v2/users?page=${page}`)
-      .then((response) => setUsers(response.data))
-      .catch((error) => console.error("Error", error));
+    try {
+      const response = await axios.get(
+        `https://gorest.co.in/public/v2/users?page=${page}`
+      );
+      setUsers(response.data);
+    } catch (error) {
+      console.error("Error", error);
+    }
   };
 
   return (
