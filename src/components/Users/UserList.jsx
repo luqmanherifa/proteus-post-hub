@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import UserPagination from "./UserPagination";
 
 const UserList = ({ users, setUsers }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
 
   useEffect(() => {
@@ -17,6 +20,8 @@ const UserList = ({ users, setUsers }) => {
           }
         );
         setUsers(response.data);
+        const paginationTotal = response.headers["x-pagination-total"];
+        setTotalPages(parseInt(paginationTotal));
       } catch (error) {
         console.error("Error", error);
       }
@@ -24,6 +29,15 @@ const UserList = ({ users, setUsers }) => {
 
     fetchUsers();
   }, []);
+
+  const handlePagination = (page) => {
+    setCurrentPage(page);
+
+    axios
+      .get(`https://gorest.co.in/public/v2/users?page=${page}`)
+      .then((response) => setUsers(response.data))
+      .catch((error) => console.error("Error", error));
+  };
 
   return (
     <div className="flex flex-wrap gap-2">
@@ -63,6 +77,11 @@ const UserList = ({ users, setUsers }) => {
           </Link>
         </div>
       ))}
+      <UserPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        handlePagination={handlePagination}
+      />
     </div>
   );
 };

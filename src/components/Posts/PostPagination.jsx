@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostPagination = ({ currentPage, totalPages, handlePageChange }) => {
+const PostPagination = ({ currentPage, totalPages, handlePagination }) => {
   return (
     <div>
       <div className="flex justify-center mt-10">
@@ -9,7 +9,7 @@ const PostPagination = ({ currentPage, totalPages, handlePageChange }) => {
             <li>
               <button
                 disabled={currentPage === 1}
-                onClick={() => handlePageChange(currentPage - 1)}
+                onClick={() => handlePagination(currentPage - 1)}
                 className="bg-white px-5 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Prev
@@ -26,7 +26,7 @@ const PostPagination = ({ currentPage, totalPages, handlePageChange }) => {
             <li>
               <button
                 disabled={currentPage === totalPages}
-                onClick={() => handlePageChange(currentPage + 1)}
+                onClick={() => handlePagination(currentPage + 1)}
                 className="bg-white px-5 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Next
