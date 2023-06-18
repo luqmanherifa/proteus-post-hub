@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostPagination = ({ currentPage, totalPages }) => {
+const PostPagination = ({ currentPage, totalPages, handlePageChange }) => {
   return (
     <div>
       <div className="flex justify-center mt-10">
@@ -10,7 +10,7 @@ const PostPagination = ({ currentPage, totalPages }) => {
               <button
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
-                className="bg-white px-6 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
+                className="bg-white px-5 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Prev
               </button>
@@ -18,7 +18,7 @@ const PostPagination = ({ currentPage, totalPages }) => {
             <li>
               <button
                 aria-current="page"
-                className="bg-white w-20 px-3 py-[10px] text-sky-500 border border-gray-300 hover:bg-sky-100 hover:text-sky-500"
+                className="bg-white w-20 py-[10px] text-sky-500 border border-gray-300 hover:bg-sky-100 hover:text-sky-500"
               >
                 {currentPage}
               </button>
@@ -27,7 +27,7 @@ const PostPagination = ({ currentPage, totalPages }) => {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
-                className="bg-white px-6 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
+                className="bg-white px-5 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Next
               </button>

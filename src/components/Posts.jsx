@@ -83,7 +83,11 @@ const Posts = () => {
           </div>
         ))}
       </div>
-      <PostPagination currentPage={currentPage} totalPages={totalPages} />
+      <PostPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        handlePageChange={handlePageChange}
+      />
     </div>
   );
 };
