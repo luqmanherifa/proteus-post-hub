@@ -6,7 +6,7 @@ import App from "./App";
 import UserDetail from "./components/Users/UserDetail";
 import Login from "./components/Login";
 import Users from "./components/Users";
-import Post from "./components/Posts/Post";
+import PostDetail from "./components/Posts/PostDetail";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/post/:postId",
-    element: <Post />,
+    element: <PostDetail />,
   },
   {
     path: "/users",
