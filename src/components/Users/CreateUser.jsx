@@ -18,16 +18,16 @@ const CreateUser = ({ setUsers }) => {
     }
   }, [newUser]);
 
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
+  const handleGenderChange = (e) => {
+    setGender(e.target.value);
   };
 
-  const handleStatusChange = (event) => {
-    setStatus(event.target.value);
+  const handleStatusChange = (e) => {
+    setStatus(e.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleCreateUser = async (e) => {
+    e.preventDefault();
 
     try {
       const response = await axios.post(
@@ -53,11 +53,14 @@ const CreateUser = ({ setUsers }) => {
       setEmail("");
       setGender("");
       setStatus("");
+
+      alert("User created.");
     } catch (error) {
       console.error(error);
 
       setIsSubmitSuccess(false);
       setIsSubmitError(true);
+      alert("Create user failed.");
     }
   };
 
@@ -65,7 +68,7 @@ const CreateUser = ({ setUsers }) => {
     <div>
       <p className="mb-3 text-xl font-bold text-slate-600">Create User</p>
       <div className="mb-10">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleCreateUser}>
           <div className="mb-5">
             <label
               htmlFor="name"
@@ -75,13 +78,13 @@ const CreateUser = ({ setUsers }) => {
             </label>
             <input
               id="name"
-              type="name"
+              type="text"
               name="name"
               value={name}
-              onChange={(event) => setName(event.target.value)}
+              onChange={(e) => setName(e.target.value)}
               aria-describedby="helper-text-explanation"
               className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5"
-              placeholder="Hanni Pham"
+              placeholder="Name"
               required
             />
           </div>
@@ -97,10 +100,10 @@ const CreateUser = ({ setUsers }) => {
               type="email"
               name="email"
               value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               aria-describedby="helper-text-explanation"
               className="bg-white border border-gray-300 text-slate-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5"
-              placeholder="hannipham@gmail.com"
+              placeholder="email@proteus.com"
               required
             />
           </div>

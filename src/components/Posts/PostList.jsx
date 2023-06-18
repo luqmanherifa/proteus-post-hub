@@ -31,7 +31,7 @@ const PostList = () => {
     fetchPosts();
   }, []);
 
-  const handlePagination = async (page) => {
+  const handlePostPagination = async (page) => {
     setCurrentPage(page);
 
     try {
@@ -96,7 +96,7 @@ const PostList = () => {
       <PostPagination
         currentPage={currentPage}
         totalPages={totalPages}
-        handlePagination={handlePagination}
+        handlePostPagination={handlePostPagination}
       />
     </div>
   );

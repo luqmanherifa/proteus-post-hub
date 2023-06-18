@@ -30,7 +30,7 @@ const UserList = ({ users, setUsers }) => {
     fetchUsers();
   }, []);
 
-  const handlePagination = async (page) => {
+  const handleUserPagination = async (page) => {
     setCurrentPage(page);
 
     try {
@@ -84,7 +84,7 @@ const UserList = ({ users, setUsers }) => {
       <UserPagination
         currentPage={currentPage}
         totalPages={totalPages}
-        handlePagination={handlePagination}
+        handleUserPagination={handleUserPagination}
       />
     </div>
   );

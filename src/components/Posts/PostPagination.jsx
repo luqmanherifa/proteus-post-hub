@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostPagination = ({ currentPage, totalPages, handlePagination }) => {
+const PostPagination = ({ currentPage, totalPages, handlePostPagination }) => {
   return (
     <div>
       <div className="mx-auto mt-5">
@@ -9,7 +9,7 @@ const PostPagination = ({ currentPage, totalPages, handlePagination }) => {
             <li>
               <button
                 disabled={currentPage === 1}
-                onClick={() => handlePagination(currentPage - 1)}
+                onClick={() => handlePostPagination(currentPage - 1)}
                 className="bg-white px-5 py-3 ml-0 leading-tight text-slate-500 border border-gray-300 rounded-l-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Prev
@@ -26,7 +26,7 @@ const PostPagination = ({ currentPage, totalPages, handlePagination }) => {
             <li>
               <button
                 disabled={currentPage === totalPages}
-                onClick={() => handlePagination(currentPage + 1)}
+                onClick={() => handlePostPagination(currentPage + 1)}
                 className="bg-white px-5 py-3 leading-tight text-slate-500 border border-gray-300 rounded-r-lg hover:bg-slate-200 hover:text-slate-600"
               >
                 Next
