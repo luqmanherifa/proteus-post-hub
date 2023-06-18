@@ -132,14 +132,14 @@ const UserDetail = () => {
               {isUpdateOpen && (
                 <UpdateUser
                   userId={userId}
-                  setUser={setUser}
                   name={name}
-                  setName={setName}
                   email={email}
-                  setEmail={setEmail}
                   gender={gender}
-                  setGender={setGender}
                   status={status}
+                  setUser={setUser}
+                  setName={setName}
+                  setEmail={setEmail}
+                  setGender={setGender}
                   setStatus={setStatus}
                 />
               )}

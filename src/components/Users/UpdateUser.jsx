@@ -3,14 +3,14 @@ import React, { useState } from "react";
 
 const UpdateUser = ({
   userId,
-  setUser,
   name,
-  setName,
   email,
-  setEmail,
   gender,
-  setGender,
   status,
+  setUser,
+  setName,
+  setEmail,
+  setGender,
   setStatus,
 }) => {
   const [isUpdateSuccess, setIsUpdateSuccess] = useState(false);
