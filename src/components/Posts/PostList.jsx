@@ -36,7 +36,12 @@ const PostList = () => {
 
     try {
       const response = await axios.get(
-        `https://gorest.co.in/public/v2/posts?page=${page}`
+        `https://gorest.co.in/public/v2/posts?page=${page}`,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
       );
       setPosts(response.data);
     } catch (error) {
