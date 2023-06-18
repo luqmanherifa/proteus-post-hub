@@ -12,16 +12,6 @@ const Posts = () => {
       .get("https://gorest.co.in/public/v2/posts")
       .then((response) => {
         setPosts(response.data);
-      })
-      .catch((error) => {
-        console.error("Error", error);
-      });
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get("https://gorest.co.in/public/v2/posts")
-      .then((response) => {
         const paginationTotal = response.headers["x-pagination-total"];
         setTotalPages(parseInt(paginationTotal));
       })
