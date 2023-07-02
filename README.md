@@ -24,7 +24,7 @@
 
 ## Design
 ### Font
-  - [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+  - [Rubik](https://fonts.google.com/specimen/Rubik)
   
 ### Colors
   - ![#0EA5E9](https://placehold.co/20x20/0EA5E9/0EA5E9.png) #0EA5E9
