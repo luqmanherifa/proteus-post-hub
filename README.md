@@ -51,11 +51,5 @@
 npm run dev
 ```
 
-## Social
-  - [Email](mailto:luqmanherifa@gmail.com)
-  - [Instagram](https://www.instagram.com/luqmanherifa)
-  - [LinkedIn](https://www.linkedin.com/in/luqmanherifa)
-  - [Dribbble](https://dribbble.com/luqmanherifa)
-
 ## Thanks to
   - [Go REST](https://gorest.co.in)
