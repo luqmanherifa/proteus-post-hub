@@ -1,7 +1,7 @@
 # Proteus: Post Hub
 
 ## Display
-![Display]()
+![Display](https://raw.githubusercontent.com/luqmanherifa/luqman-herifa-personal-portfolio-v2/main/public/works/uc.png)
 
 ## Software
 ### Languages
