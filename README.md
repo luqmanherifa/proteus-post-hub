@@ -13,7 +13,6 @@
   - Go REST
   - Tailwind CSS
   - Flowbite
-  - Google Fonts
 
 ### Tools
   - Visual Studio Code
