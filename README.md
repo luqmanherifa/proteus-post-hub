@@ -18,10 +18,6 @@
 ### Tools
   - Visual Studio Code
 
-### Features
-  - Post Page
-  - User Page
-
 ## Design
 ### Font
   - [Rubik](https://fonts.google.com/specimen/Rubik)
