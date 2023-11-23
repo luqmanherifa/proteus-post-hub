@@ -9,10 +9,12 @@ Proteus is a post hub contains posts and users information and detail, post and 
   - JavaScript
   - HTML/CSS
 
-### Libraries
+### Frameworks
   - React
-  - Go REST
   - Tailwind CSS
+
+### Libraries
+  - Go REST
   - Flowbite
 
 ### Tools
