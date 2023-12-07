@@ -34,7 +34,7 @@ Proteus is a post hub contains posts and users information and detail, post and 
 ### Platform
   - Web
   
-### Deployment
+### Live
   - [Netlify](https://proteus-luqmanherifa.netlify.app)
 
 ### Responsive
