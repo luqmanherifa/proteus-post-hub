@@ -1,5 +1,5 @@
 # Proteus: Post Hub
-Proteus is a post hub contains posts and users information and detail, post and user submit and edit features based on web. The project was developed for practicing React and fetch API using React, Axios, TailwindCSS, and others.
+Proteus is a post hub contains posts and users information and detail, post and user submit and edit features based on web. The project was developed for practicing React and fetch API using React, Axios, Tailwind CSS, and others.
 
 ## Interface
 ![Interface](https://raw.githubusercontent.com/luqmanherifa/luqman-herifa-personal-portfolio-v2/main/public/works/proteus.png)
